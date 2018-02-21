@@ -18,6 +18,6 @@ namespace WcfTestApp
         Task<int> AddAsyncTest(int a, int b);
 
         [OperationContract]
-        int Substract(int a, int b);
+        int Subtract(int a, int b);
     }
 }

@@ -22,7 +22,7 @@ namespace WcfTestApp
             return result;
         }
 
-        public int Substract(int a, int b)
+        public int Subtract(int a, int b)
         {
             return a - b;
         }
