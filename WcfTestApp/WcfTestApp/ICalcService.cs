@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace WcfTestApp
 {
@@ -14,8 +15,7 @@ namespace WcfTestApp
         int Add(int a, int b);
 
         [OperationContract(AsyncPattern = true)]
-        IAsyncResult BeginAdd(int a, int b, AsyncCallback callback, object state);
-        int EndAdd(IAsyncResult asyncResult);
+        Task<int> AddAsyncTest(int a, int b);
 
         [OperationContract]
         int Substract(int a, int b);

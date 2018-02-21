@@ -17,36 +17,11 @@ namespace WcfTestApp
             return a + b;
         }
 
-        public async Task<int> AddAsync(int a, int b)
+        public async Task<int> AddAsyncTest(int a, int b)
         {
             var myTask = Task.Factory.StartNew(() => Add(a, b));
             var result = await myTask;
             return result;
-        }
-
-        //TODO Investigate: do async methods work in SOAP?
-        public IAsyncResult BeginAdd(int a, int b, AsyncCallback callback, object state) {
-            var tcs = new TaskCompletionSource<int>(state);
-            var task = AddAsync(a, b);
-            task.ContinueWith(t =>
-            {
-                if (t.IsFaulted)
-                    tcs.TrySetException(t.Exception.InnerExceptions);
-                else if (t.IsCanceled)
-                    tcs.TrySetCanceled();
-                else
-                    tcs.TrySetResult(t.Result);
-
-                if (callback != null)
-                    callback(tcs.Task);
-            });
-
-            return tcs.Task;
-        }
-
-        public int EndAdd(IAsyncResult asyncResult)
-        {
-            return ((Task<int>)asyncResult).Result;
         }
 
         public int Substract(int a, int b)
