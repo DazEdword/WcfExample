@@ -12,6 +12,12 @@ namespace WcfTestApp
     {
         [OperationContract]
         int Add(int a, int b);
+
+        [OperationContract(AsyncPattern = true)]
+        IAsyncResult BeginAdd(int a, int b, AsyncCallback callback, object state);
+        int EndAdd(IAsyncResult asyncResult);
+
+        [OperationContract]
         int Substract(int a, int b);
     }
 }
