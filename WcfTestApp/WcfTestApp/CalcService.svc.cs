@@ -24,10 +24,24 @@ namespace WcfTestApp
 
         public Response Process(Request request)
         {
+            int? result;
+            bool success;
+
+            try
+            {
+                result = Add(request.a, request.b);
+                success = true;
+            }
+            catch (System.FormatException)
+            {
+                result = null;
+                success = false;
+            }
+           
             return new Response()
             {
-                result = request.a + request.b,
-                success = true,
+                result = result,
+                success = success
             };
         }
 

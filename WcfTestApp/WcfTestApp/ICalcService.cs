@@ -33,6 +33,6 @@ namespace WcfTestApp
     public class Response
     {
         public bool success;
-        public int result;
+        public int? result;
     }
 }
