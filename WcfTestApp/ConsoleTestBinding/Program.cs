@@ -12,10 +12,10 @@ namespace ConsoleTestBinding
                 Console.WriteLine("Please type your first digit and press enter.");
 
                 //TODO Improve user input robustness so that only integers are accepted
-                int a = Convert.ToInt32(Console.ReadLine());
+                int a = GetUserInput();
 
                 Console.WriteLine("Please type your second digit and press enter.");
-                int b = Convert.ToInt32(Console.ReadLine());
+                int b = GetUserInput();
 
                 Console.WriteLine("Sending request to server...");
                 var req = new CalcServiceReference.Request()
@@ -37,6 +37,18 @@ namespace ConsoleTestBinding
                 
                 Console.ReadKey();
             }
+        }
+
+        static int GetUserInput()
+        {
+            int value;
+
+            while (!int.TryParse(Console.ReadLine(), out value))
+            {
+                Console.WriteLine("Please Enter a valid numerical value!");
+            }
+
+            return value;
         }
     }
 }
