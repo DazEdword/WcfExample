@@ -11,7 +11,6 @@ namespace ConsoleTestBinding
                 Console.WriteLine("Let's add some numbers.");
                 Console.WriteLine("Please type your first digit and press enter.");
 
-                //TODO Improve user input robustness so that only integers are accepted
                 int a = GetUserInput();
 
                 Console.WriteLine("Please type your second digit and press enter.");
