@@ -22,6 +22,15 @@ namespace WcfTestApp
             return result;
         }
 
+        public Response Process(Request request)
+        {
+            return new Response()
+            {
+                result = request.a + request.b,
+                success = true,
+            };
+        }
+
         public int Subtract(int a, int b)
         {
             return a - b;

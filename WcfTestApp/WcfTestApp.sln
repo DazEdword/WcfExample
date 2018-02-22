@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfTestApp", "WcfTestApp\WcfTestApp.csproj", "{587369F0-0ED3-41AF-AEE7-3525672399B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTestBinding", "ConsoleTestBinding\ConsoleTestBinding.csproj", "{40B6F50E-0A5E-4FB7-9857-6F6DDCD22831}"
+	ProjectSection(ProjectDependencies) = postProject
+		{587369F0-0ED3-41AF-AEE7-3525672399B0} = {587369F0-0ED3-41AF-AEE7-3525672399B0}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{587369F0-0ED3-41AF-AEE7-3525672399B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{587369F0-0ED3-41AF-AEE7-3525672399B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{587369F0-0ED3-41AF-AEE7-3525672399B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40B6F50E-0A5E-4FB7-9857-6F6DDCD22831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40B6F50E-0A5E-4FB7-9857-6F6DDCD22831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40B6F50E-0A5E-4FB7-9857-6F6DDCD22831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40B6F50E-0A5E-4FB7-9857-6F6DDCD22831}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

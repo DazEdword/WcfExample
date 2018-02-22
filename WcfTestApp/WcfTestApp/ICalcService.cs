@@ -19,5 +19,20 @@ namespace WcfTestApp
 
         [OperationContract]
         int Subtract(int a, int b);
+
+        [OperationContract]
+        Response Process(Request request);
+    }
+
+    public class Request
+    {
+        public int a;
+        public int b;
+    }
+
+    public class Response
+    {
+        public bool success;
+        public int result;
     }
 }
