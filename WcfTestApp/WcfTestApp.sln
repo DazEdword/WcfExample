@@ -3,12 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfTestApp", "WcfTestApp\WcfTestApp.csproj", "{587369F0-0ED3-41AF-AEE7-3525672399B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfMiniApp", "WcfTestApp\WcfMiniApp.csproj", "{587369F0-0ED3-41AF-AEE7-3525672399B0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTestBinding", "ConsoleTestBinding\ConsoleTestBinding.csproj", "{40B6F50E-0A5E-4FB7-9857-6F6DDCD22831}"
 	ProjectSection(ProjectDependencies) = postProject
 		{587369F0-0ED3-41AF-AEE7-3525672399B0} = {587369F0-0ED3-41AF-AEE7-3525672399B0}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfTests", "WcfTests\WcfTests.csproj", "{84319716-F280-4CA4-9143-1D2429BEF43B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,10 @@ Global
 		{40B6F50E-0A5E-4FB7-9857-6F6DDCD22831}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40B6F50E-0A5E-4FB7-9857-6F6DDCD22831}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40B6F50E-0A5E-4FB7-9857-6F6DDCD22831}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84319716-F280-4CA4-9143-1D2429BEF43B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84319716-F280-4CA4-9143-1D2429BEF43B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84319716-F280-4CA4-9143-1D2429BEF43B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84319716-F280-4CA4-9143-1D2429BEF43B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
