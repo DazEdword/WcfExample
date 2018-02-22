@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfTestApp" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfTestApp" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="Request_Received">
+  <xs:complexType name="Request">
     <xs:sequence>
       <xs:element minOccurs="0" name="a" type="xs:int" />
       <xs:element minOccurs="0" name="b" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="Request_Received" nillable="true" type="tns:Request_Received" />
-  <xs:complexType name="Response_Returned">
+  <xs:element name="Request" nillable="true" type="tns:Request" />
+  <xs:complexType name="Response">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
       <xs:element minOccurs="0" name="result" type="xs:int" />
+      <xs:element minOccurs="0" name="success" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="Response_Returned" nillable="true" type="tns:Response_Returned" />
+  <xs:element name="Response" nillable="true" type="tns:Response" />
 </xs:schema>

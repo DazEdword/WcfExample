@@ -49,14 +49,14 @@
   <xs:element name="Process">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfTestApp" minOccurs="0" name="request" nillable="true" type="q1:Request_Received" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfTestApp" minOccurs="0" name="request" nillable="true" type="q1:Request" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="ProcessResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfTestApp" minOccurs="0" name="ProcessResult" nillable="true" type="q2:Response_Returned" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfTestApp" minOccurs="0" name="ProcessResult" nillable="true" type="q2:Response" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

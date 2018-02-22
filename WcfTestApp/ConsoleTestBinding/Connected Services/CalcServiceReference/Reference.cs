@@ -15,9 +15,9 @@ namespace ConsoleTestBinding.CalcServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Request_Received", Namespace="http://schemas.datacontract.org/2004/07/WcfTestApp")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Request", Namespace="http://schemas.datacontract.org/2004/07/WcfTestApp")]
     [System.SerializableAttribute()]
-    public partial class Request_Received : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Request : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -76,18 +76,18 @@ namespace ConsoleTestBinding.CalcServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Response_Returned", Namespace="http://schemas.datacontract.org/2004/07/WcfTestApp")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Response", Namespace="http://schemas.datacontract.org/2004/07/WcfTestApp")]
     [System.SerializableAttribute()]
-    public partial class Response_Returned : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class Response : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool SuccessField;
+        private int resultField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int resultField;
+        private bool successField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -100,19 +100,6 @@ namespace ConsoleTestBinding.CalcServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Success {
-            get {
-                return this.SuccessField;
-            }
-            set {
-                if ((this.SuccessField.Equals(value) != true)) {
-                    this.SuccessField = value;
-                    this.RaisePropertyChanged("Success");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public int result {
             get {
                 return this.resultField;
@@ -121,6 +108,19 @@ namespace ConsoleTestBinding.CalcServiceReference {
                 if ((this.resultField.Equals(value) != true)) {
                     this.resultField = value;
                     this.RaisePropertyChanged("result");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool success {
+            get {
+                return this.successField;
+            }
+            set {
+                if ((this.successField.Equals(value) != true)) {
+                    this.successField = value;
+                    this.RaisePropertyChanged("success");
                 }
             }
         }
@@ -158,10 +158,10 @@ namespace ConsoleTestBinding.CalcServiceReference {
         System.Threading.Tasks.Task<int> SubtractAsync(int a, int b);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalcService/Process", ReplyAction="http://tempuri.org/ICalcService/ProcessResponse")]
-        ConsoleTestBinding.CalcServiceReference.Response_Returned Process(ConsoleTestBinding.CalcServiceReference.Request_Received request);
+        ConsoleTestBinding.CalcServiceReference.Response Process(ConsoleTestBinding.CalcServiceReference.Request request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICalcService/Process", ReplyAction="http://tempuri.org/ICalcService/ProcessResponse")]
-        System.Threading.Tasks.Task<ConsoleTestBinding.CalcServiceReference.Response_Returned> ProcessAsync(ConsoleTestBinding.CalcServiceReference.Request_Received request);
+        System.Threading.Tasks.Task<ConsoleTestBinding.CalcServiceReference.Response> ProcessAsync(ConsoleTestBinding.CalcServiceReference.Request request);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -215,11 +215,11 @@ namespace ConsoleTestBinding.CalcServiceReference {
             return base.Channel.SubtractAsync(a, b);
         }
         
-        public ConsoleTestBinding.CalcServiceReference.Response_Returned Process(ConsoleTestBinding.CalcServiceReference.Request_Received request) {
+        public ConsoleTestBinding.CalcServiceReference.Response Process(ConsoleTestBinding.CalcServiceReference.Request request) {
             return base.Channel.Process(request);
         }
         
-        public System.Threading.Tasks.Task<ConsoleTestBinding.CalcServiceReference.Response_Returned> ProcessAsync(ConsoleTestBinding.CalcServiceReference.Request_Received request) {
+        public System.Threading.Tasks.Task<ConsoleTestBinding.CalcServiceReference.Response> ProcessAsync(ConsoleTestBinding.CalcServiceReference.Request request) {
             return base.Channel.ProcessAsync(request);
         }
     }

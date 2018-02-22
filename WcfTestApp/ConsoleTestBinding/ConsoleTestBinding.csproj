@@ -64,7 +64,7 @@
     <None Include="Connected Services\CalcServiceReference\CalcService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CalcServiceReference\ConsoleTestBinding.CalcServiceReference.Response_Returned.datasource">
+    <None Include="Connected Services\CalcServiceReference\ConsoleTestBinding.CalcServiceReference.Response.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>

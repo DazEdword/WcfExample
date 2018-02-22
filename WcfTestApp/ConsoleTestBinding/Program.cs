@@ -8,14 +8,23 @@ namespace ConsoleTestBinding
         {
             using (var client = new CalcServiceReference.CalcServiceClient())
             {
-                var req = new CalcServiceReference.Request_Received()
+                Console.WriteLine("Let's add some numbers.");
+                Console.WriteLine("Please type your first digit and press enter.");
+                int a = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Please type your second digit and press enter.");
+                int b = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Sending request to server...");
+                var req = new CalcServiceReference.Request()
                 {
-                    a = 1,
-                    b = 4
+                    a = a,
+                    b = b
                 };
 
                 var response = client.Process(req);
-                Console.WriteLine(response.result);
+
+                Console.WriteLine(String.Format("Your result: {0}", response.result));
                 Console.ReadKey();
             }
         }
