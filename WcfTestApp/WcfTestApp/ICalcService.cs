@@ -26,6 +26,7 @@ namespace WcfTestApp
 
     public class Request
     {
+        public string operation;
         public int a;
         public int b;
     }

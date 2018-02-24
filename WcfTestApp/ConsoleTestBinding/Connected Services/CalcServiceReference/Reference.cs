@@ -28,6 +28,9 @@ namespace ConsoleTestBinding.CalcServiceReference {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int bField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string operationField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -64,6 +67,19 @@ namespace ConsoleTestBinding.CalcServiceReference {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string operation {
+            get {
+                return this.operationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.operationField, value) != true)) {
+                    this.operationField = value;
+                    this.RaisePropertyChanged("operation");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -84,7 +100,7 @@ namespace ConsoleTestBinding.CalcServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int resultField;
+        private System.Nullable<int> resultField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool successField;
@@ -100,7 +116,7 @@ namespace ConsoleTestBinding.CalcServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int result {
+        public System.Nullable<int> result {
             get {
                 return this.resultField;
             }
