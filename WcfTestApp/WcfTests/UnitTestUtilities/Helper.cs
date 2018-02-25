@@ -13,7 +13,6 @@ namespace WcfTests.UnitTestUtilities {
             return RunMethod(t, strMethod, null, aobjParams, eFlags);
         }
 
-
         public static object RunInstanceMethod(System.Type t, string strMethod, object objInstance, object[] aobjParams) {
             BindingFlags eFlags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
             return RunMethod(t, strMethod, objInstance, aobjParams, eFlags);

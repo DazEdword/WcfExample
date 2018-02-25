@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfMiniApp", "WcfTestApp\WcfMiniApp.csproj", "{587369F0-0ED3-41AF-AEE7-3525672399B0}"
 EndProject
@@ -11,6 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTestBinding", "Conso
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfTests", "WcfTests\WcfTests.csproj", "{84319716-F280-4CA4-9143-1D2429BEF43B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{587369F0-0ED3-41AF-AEE7-3525672399B0} = {587369F0-0ED3-41AF-AEE7-3525672399B0}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
