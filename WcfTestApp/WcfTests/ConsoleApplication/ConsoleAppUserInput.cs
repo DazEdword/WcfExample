@@ -3,17 +3,12 @@ using NUnit.Framework;
 using NSubstitute;
 using RunHelper = WcfTests.UnitTestUtilities.RunHelper;
 using Target = ConsoleTestBinding.CalcConsoleClient;
-using System;
+
 
 namespace WcfTests.ConsoleApplication {
 
     [TestFixture]
     public class ConsoleAppUserInput {
-
-        [SetUp]
-        public void SetUp() {
-            
-        }
 
         [Test]
         public void GetUserNumericalInputReturnsIntegerWhenInputIsInteger() {

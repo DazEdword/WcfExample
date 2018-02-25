@@ -10,7 +10,7 @@ namespace ConsoleTestBinding {
             using (var client = new CalcServiceReference.CalcServiceClient()) {
                 Console.WriteLine("Welcome to the WCF calculator. Please make sure to type your input and press enter when prompted.");
                 Console.WriteLine(String.Format("Let's do some simple math. The available operations are: {0}", String.Join(", ", availableOperations)));
-                Console.WriteLine("What operation would you like the app to do?");
+                Console.WriteLine("What operation would you like the app to perform?");
 
                 string operation = GetUserOperationInput();
                 Console.WriteLine("First digit?");
