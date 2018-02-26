@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 
 namespace WcfTestApp {
-
     public class CalcService : ICalcService {
 
         public Response Process(Request request) {
@@ -24,7 +23,7 @@ namespace WcfTestApp {
                 }
 
                 success = true;
-            } catch (System.FormatException) {
+            } catch (System.Exception) {
                 result = null;
                 success = false;
             }
