@@ -1,23 +1,26 @@
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   using NUnit.Framework;
-using NSubstitute;
+using NUnit.Framework;
 using WcfTestApp;
 
-namespace CalcServiceTests {
+namespace CalcServiceTests
+{
     [TestFixture]
-    public class CalcServiceTests {
-
+    public class CalcServiceTests
+    {
         public CalcService service;
 
         [SetUp]
-        public void SetUp() {
+        public void SetUp()
+        {
             service = new CalcService();
         }
 
         [Test]
-        public void ProcessCallsAddMethodWhenRequestOperationIsAdd() {
+        public void ProcessCallsAddMethodWhenRequestOperationIsAdd()
+        {
             // Arrange
 
-            var MockRequest = new WcfTestApp.Request() {
+            var MockRequest = new Request()
+            {
                 operation = "add",
                 a = 1,
                 b = 1
@@ -32,10 +35,12 @@ namespace CalcServiceTests {
         }
 
         [Test]
-        public void ProcessCallsSubtractMethodWhenRequestOperationIsSubtract() {
+        public void ProcessCallsSubtractMethodWhenRequestOperationIsSubtract()
+        {
             // Arrange
 
-            var MockRequest = new WcfTestApp.Request() {
+            var MockRequest = new Request()
+            {
                 operation = "subtract",
                 a = 1,
                 b = 1
@@ -50,4 +55,3 @@ namespace CalcServiceTests {
         }
     }
 }
-                                                                                                                                                                                  
