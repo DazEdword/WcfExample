@@ -54,15 +54,4 @@ namespace WcfTestApp {
             return result;
         }
     }
-
-    public class Request {
-        public string operation;
-        public int a;
-        public int b;
-    }
-
-    public class Response {
-        public bool success;
-        public int? result;
-    }
 }
