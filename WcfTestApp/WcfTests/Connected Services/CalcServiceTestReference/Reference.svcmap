@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="88e907a8-e98a-4223-995b-76ae2f8f6229" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5956870b-99d8-4772-b15e-d38caefdfaf9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:56890/CalcService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:56890/Services/CalcService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CalcService.xsd" MetadataType="Schema" ID="a232f9c2-3fa9-4f50-b61f-2da48d756020" SourceId="1" SourceUrl="http://localhost:56890/CalcService.svc?xsd=xsd0" />
-    <MetadataFile FileName="CalcService1.xsd" MetadataType="Schema" ID="b83718fe-330b-4f99-98b3-03dadd2d0bd2" SourceId="1" SourceUrl="http://localhost:56890/CalcService.svc?xsd=xsd2" />
-    <MetadataFile FileName="CalcService.disco" MetadataType="Disco" ID="0f08ff31-35f3-4500-aa31-be668d16e6fe" SourceId="1" SourceUrl="http://localhost:56890/CalcService.svc?disco" />
-    <MetadataFile FileName="CalcService.wsdl" MetadataType="Wsdl" ID="ce6cb1d5-44cd-40e8-ae44-9aa95a5d3ba0" SourceId="1" SourceUrl="http://localhost:56890/CalcService.svc?wsdl" />
-    <MetadataFile FileName="CalcService2.xsd" MetadataType="Schema" ID="bcec4327-8f24-4786-be83-23d295074b4f" SourceId="1" SourceUrl="http://localhost:56890/CalcService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CalcService.disco" MetadataType="Disco" ID="0f35823f-8b18-4c49-a151-6f4d121f9c4f" SourceId="1" SourceUrl="http://localhost:56890/Services/CalcService.svc?disco" />
+    <MetadataFile FileName="CalcService.xsd" MetadataType="Schema" ID="ba636f35-cd3c-470f-b613-9b31601d2e3d" SourceId="1" SourceUrl="http://localhost:56890/Services/CalcService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CalcService1.xsd" MetadataType="Schema" ID="d1c1184d-fe2c-4756-b36c-f19ac73f4275" SourceId="1" SourceUrl="http://localhost:56890/Services/CalcService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CalcService.wsdl" MetadataType="Wsdl" ID="90cdfa02-aa88-47ff-871f-0f69257d6475" SourceId="1" SourceUrl="http://localhost:56890/Services/CalcService.svc?wsdl" />
+    <MetadataFile FileName="CalcService2.xsd" MetadataType="Schema" ID="abad2d42-f4f8-4b60-be76-d888f1d31fdd" SourceId="1" SourceUrl="http://localhost:56890/Services/CalcService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

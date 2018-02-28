@@ -61,19 +61,21 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CalcService.svc" />
-    <Content Include="CoolService.svc" />
+    <Content Include="Services\CalcService.svc" />
+    <Content Include="Services\CoolService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalcService.svc.cs">
+    <Compile Include="Contracts\Response.cs" />
+    <Compile Include="Contracts\Request.cs" />
+    <Compile Include="Services\CalcService.svc.cs">
       <DependentUpon>CalcService.svc</DependentUpon>
     </Compile>
-    <Compile Include="CoolService.svc.cs">
+    <Compile Include="Services\CoolService.svc.cs">
       <DependentUpon>CoolService.svc</DependentUpon>
     </Compile>
-    <Compile Include="ICalcService.cs" />
-    <Compile Include="ICoolService.cs" />
+    <Compile Include="Services\ICalcService.cs" />
+    <Compile Include="Services\ICoolService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
